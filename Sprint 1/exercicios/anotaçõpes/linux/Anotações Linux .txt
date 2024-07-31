@@ -1,0 +1,207 @@
+                                                                          COMANDOS BÁSICOS: 
+
+comando cd: ele funciona para navegar entre os diretórios e pastas, comandos que podem funcionar para voltar os diretórios é o cd ../../../ podendo brincar com esses diretórios.
+
+comando ls: ele funciona para listar o que há no diretório que você se encontra. Ele pode conter letras diferenciadas o acompanhando também como o -l, ele ajuda na questão de mostrar com mais detalhes dos itens dentro do diretório, mostrando as permissões, tamanho e data. para ver esses arquivos de forma inversa, é necessário colocar depois do -l a letra r, ficando -lr
+
+comando cat: o comando cat pode ser acompanhado pela letra n ficando (cat -n) isso também ocorre com a letra e, elas se diferem pela sua forma de mostrar a informação ou log desejado, "n" numera as alinhas do arquivo, enquanto "e" coloca um cifrão no final de cada linha. Podemos concatenar arquivos também, pegando os arquivos desejados e colocando eles junto de um > e acrescentar à um arquivo desejado usando >>
+
+comando toch: esse coamndo auxilia para criação de arquivos, ele não edita o texto dentro dele, mas cria o arquivo e modifica a data de edição de outro texto. alem de poderem ser criados vários arquivos (toch a.txt b.txt c.txt)
+
+comando man: ele funciona como um manual de qualquer comando e coisas que podemos fazer com ele. Exemplo ls man
+
+Dica: posso usar o comando ctrl + r para buscar algum comando que eu já tenha usado no terminal.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                          GERENCIAMENTO DE DIRETÓRIOS E ARQUIVOS:
+
+Criação de um diretório: É necessário o uso do comando mkdir e a sua sintaxe para criação é colocar o comando e em seguida colocar o nome do diretório. Com esse comando eu posso criar mais de um diretório de uma vez, diferenciando-os por espaços (mkdir css js img) e usando o comando -v antes de ser colocado o nome da pasta, o processo de criação desse diretório é mostrado. é possível também a criação de um diretório dentro do outro separando eles por / (mkdir dir2/dir3), para poder criar uma estrutura de diretórios mais complexas é necessário colocar o comando -p antes dos nomes dos diretórios.
+
+remoção de diretórios e arquivos: Para remover um arquivo ou um diretório, podemos usar o comando "rm", para a remoção é necessário colocar o comando e o nome do arquivo. podemos apagar vários arquivos de uma vez, colocando seus nomes em sequência. se colocarmos o comando -i junto dele, poderemos fazer uma segunda verificação, caso não tenhamos certeza de excluir o arquivo. Para remover um diretório vazio, precisamos colocar junto do rm o comando -dv, e para diretórios com coisas dentro dele, o comando -rfv. 
+
+Remoção apenas de diretórios: Para remover diretórios é rmdir
+
+Copiar arquivos e diretórios: Para copiar arquivos e diretórios precisamos usar o comando cp, para usa-lo é necessário colocar o nome do comando "cp" e em seguida colocar o nome do arquivo que deseja copiar (se quiser criar um outro arquivo, apenas coloque o nome desse novo arquivo e o formato), é possível, também, enviar uma copia direto para um diretório, colocando o comando, o nome do arquivo e o diretório que deseja enviar a copia (pode ser copiado vários arquivos de uma vez). para copiar os diretórios é necessário colocar depois do comando -r, assim ele copia o diretório e manda para esse novo diretório. Para copiar os arquivos que estão dentro do diretório, é necessário colocar um * depos do diretório desejado (cp -r dir5/*)
+
+Movendo arquivos e diretórios: Para mover arquivos e diretórios, é necessário o uso do comando "mv", sua sintaxe é de colocar o comando, depois o nome do arquivo, e então o nome do diretório que deseja ser o novo local desse arquivo. E para mover diretórios é necessário colocar um * e o nome do diretório ou apenas os nomes dos diretórios.
+PS: saber o diretório que está é usado o comando pwd.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+                                                                          GERENCIAMENTO DE PACOTES E APLICATIVOS:
+
+Atualizar repositórios e aplicativos/pacotes: é necessário o uso do sudo e do apt-get junto de update e depois para atualizar aplicativos temos que usar o comando upgrade.
+
+
+Instalar aplicativos e pacotes: se eu souber o aplicativo que eu desejo instalar, é necessário apenas colocar apt-get install e o nome do aplicativo
+
+Deletar aplicativos e pacotes: Precisa colocar o comando purge depois do apt-get. Podemos limpar também os aplicativos com o comando autoremove.
+
+Buscar aplicativos e pacotes: Yemos que usar o comando apt-cache, o comando search e o nome do aplicativo que gostaríamos de usar.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                          Filtro para busca de arquivos:
+
+
+Comando head: ele seve para  ver as primeiras linhas de um arquivo de texto, para usa-lo preciso colocar ele mais o arquivo que eu quero ver o resumo (head doc.txt). posso usar o -n para determinar o numero de linhas, além de poder enviar essas linhas para um outro arquivo, colocando > mais o nome do arquivo.
+
+Comando tail: ele faz o inverso do head dando as ultimas linhas do texto. Podemos usar o tail para acompanhar as alterações de um texto usando o -f (muito usado para debugs)
+
+Comando grep: ele busca um comando dentro de um arquivo. é necessário apenas colocar o comando, a palavra ou termo entre aspas e o arquivo. Posso usaro argumento -i para ignorar erros, usar o -c para falar quantas vezes ela repete, o -r busca em todos os arquivos do diretório.
+
+Comando find: ele serve para achar diretórios e arquivos, é necessário colocar o seu nome, e depois o argumento -name, caso saiba e digite o nome corretamente, caso não saiba, deve-se colocar -iname, logo depoiscolocar o nome do arquivo que desejamos encontrar. posso também colocar só uma parte do nome do documento e então colocar um *, e todos os parecidos irão aparecer (find -iname docum*). Posso achar arquivos e diretórios vazios usando o argumento -empty e se for especificar o tipo de arquivo, -type "f" para arquivos e "d" para diretórios.
+
+Comando locate: ele é parecido com o find, pois ele já tem mapiado todos os arquivos antigos do banco de dados, podemos achar os arquivos que ele sabe e onde está o banco de dados usando o -s.
+
+PS: usar o último comando que eu usei é preciso colocar apenas "!!", posso usar eles depois do sudo também (sudo !!).
+De onde os comandos são executados? Posso usar o comando which mais o comando que u quero saber.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                          Editores de texto:
+
+Nano: Para abri-lo é necessário apenas digitar nano no terminal, para salvar o arquivo preciso clicar no ctrl "o", e para sair, preciso clicar no ctrl "x".
+Para editar um arquivo, preciso colocar nano e em seguida colocar o nome do arquivo. Podemos também alterar e inserir outros arquivos nele, ao clicar no ctrl + r, ele irá pedir o nome do arquivo que eu desejo colar dentro deste novo. Para começar a selecionar um arquivo, preciso clicar no alt + a, em seguida guiar o que eu quero copiar com as setas, para copiar o que foi selecionado, preciso clicar no Alt + 6 e para colar  ctrl + u. Para recortar eu mudo o comando alt + 6 para ctrl + k.
+Para ir ao final do arquivo preciso clicar no alt + /, e para ir para cima alt+ \. Para ir à uma linha especifica preciso clicar no alt + g e colocar a linha.
+Para buscar no nano, é preciso colocar o alt + w, ao clicar no alt + r, eu consigo substituir palavras que eu desejo, depois de clicar no "a".
+
+
+VIM: Para usar o vim, precisamos colocar vim no terminal e ao lado dele o novo nome do arquivo. Nele eu preciso escolher se eu estou no modo de inserir informações, clicando no "i" ou no modo de comandos, clicando no "esc". Para salvar o arquivo é necessário estar no modo de comando e colocar :x. Para editar um texto é da mesma forma que o nano, e para apenas salvar o arquivo colocar :w. Para sair :q.
+Para deletar uma linha é necessário colocar o comando "dd" para deletar uma linha ou somente d e a direção da linha. Para desfazer preciso colocar o comando "u". e para voltar meu comando ctrl + r.
+Para buscar e recolocar palavras preciso colocar os comandos respectivamente: / + a palavra (Para mudar a palavra é necessário clicar apena o n, e shift + n para voltar) e %s/ + a palavra que eu quero substituir + / + a palavra nova (para fazer em apenas uma linha, colocar mais uma barra e a letra "g").
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                          Gerenciamento de usuários e grupos:
+
+Adicionar usuários: Comando adduser + nome do usuário.
+
+deletando usuários: Comando userdel --remove + nome do usuário 
+
+Modificando os nomes no display: Comando usermod -c 'nome novo' nome antigo.
+
+Modificando o nome do usuário: usermod -l nome novo -d /home/nome novo -m nome antigo
+
+Bloqueando e desbloqueando usuários: Comando usermod -L + nome do usuário. Para desbloquear Comando usermod -U + nome do usuário
+
+Criar um grupo no Linux: Para ver os grupos existentes o comando usado é getent group. Para adicionar é preciso colocar o comando  groupadd -g + código para o grupo + nome do grupo.
+
+Deletando grupos: Precisa usar o comando groupdel + nome do grupo.
+
+Mover usuários para outros grupos: Para mover é necessário usar o comando usermod -a -G + nome da pasta + nome do usuário. PS: para ver em quais grupos seu usuário está o comando é groups + nome do usuário.
+
+Remover usuário de um grupo: Usa-se o comando gpasswd -d + nome do usuário + nome do grupo.
+
+PS: Para mudar a senha do usuário é necessário usar o comando passwd.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                          Gerenciamento de permissões:
+
+ modo numérico: Usar o comando chmod x(proprietário)x(pessoas do grupo)x(usuários externos) + arquivo ou diretório
+
+as letras x tem que ser substituídas por algum número entre 0 e 7.
+0 = sem permissão ---
+1 = executar --x
+2 = modificar -w-
+3 = escrever e executar -wx
+4 = ler r--
+5 = ler e executar r-x
+6 = ler e escrever rw-
+7 = ler executar e escrever rwx
+
+Alterar dono do arquivo: chown + nome do novo dono + nome do arquivo.
+Alterar grupo do arquivo: chgrp + nome do grupo + arquivo ou diretório 
+Linux para Desenvolvedores (c/ terminal, Shell, Apache e +)
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                          Gerenciamento de redes:
+
+Ping: O ping testa se estamos conectados à internet, e conseguimos pingar outros ips. Muito usado em testes de rede.
+
+Netstat: São as estatísticas das redes. Ele analisa quais conexões nossa maquina está fazendo. Unix são conexões feitas pelas maquinas.
+
+Ifconfig: É a configuração de detalhes de redes que nós usamos. Podemos alterar essas configurações usando esse comando.
+
+Nslookup: Ele encontra informações de um servidor mais próximo de mim.
+
+Tcpdump: Mostra todas as configurações tcp que nossa máquina está fazendo.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                          Compactação e descompactação de arquivos:
+
+Comando tar: temos que colocar o comando junto de um -czvf + o nome do arquivo + .tar.gz + a pasta que eu desejo compactar. Para compactar vários arquivos preciso colocar tar -czvf + nome do arquivo compactado + .tar.gz + todas as coisas que eu quero compactar. Para descompactar preciso usar o comando tar -xzvf + arquivo compactado (para direcionar o arquivo para um diretório é necessário colocar um -C + a pasta onde irão as informações. para ver o que há no arquivo .tar é necessário usar o comando tar -tvf + arquivo.tar.gz
+
+Para compactar para um arquivo .zip preciso colocar o comando zip -r + o nome do arquivo + .zip + o diretório que será compactado. para descompactar é preciso colocar o comando unzip + arquivo.zip + -d + o diretório para irem os arquivos descompactados.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
