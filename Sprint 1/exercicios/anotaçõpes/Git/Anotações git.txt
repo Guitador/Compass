@@ -1,1 +1,191 @@
-Anotações git
+Comandos Fundamentais:
+
+Criar um repositório: Para criar um repositório é necessário colocar o comando git init no terminal.
+
+O GitHub é um serviço que gerencia repositórios, podemos enviar os nossos projetos nele e podemos compartilhar com nossos companheiros, tanto público quanto privado.
+
+Para enviar um repositório para o GitHub, precisamos criar um projeto no GitHub e depois sincronizar com o nosso repositório, seguindo os comandos da pagina do GH.
+
+Para verificar as mudanças do projeto, é necessário o uso do comando "git status" o git vai mapear tudo o que acontece com o repositório. 
+
+Para adicionar arquivos novos ao git existe o comando "git add", se o arquivo não for adicionado ao repositório ele não será visto como existente. Para adicionar todos os arquivos de uma vez só é necessário apenas colocar um . ao invés dos nomes dos arquivos.
+
+Para salvar as alterações do projeto, é necessário usar o comando "git commit <file>", o parâmetro -a commita todos os arquivos , caso queira colocar uma mensagem junto, é necessário o parâmetro -m.
+
+Para enviar o código para o repositório, existe o comando "git push". 
+
+Para sincronizar as alterações feitas no repositorio existe o comando "git pull", ele irá baixar as alterações feitas pelos outros proprietários do repositório.
+
+Para clonar um repositório existe o comando "git clone" + a url do repositório. Depois eu estarei usando e auxiliando neste projeto, eu acho essa url na aba code do GH.
+
+Podemos também remover um arquivo do repositório, usando o comando "git rm <file>". Para atualiza-lo é necessário enviar a informação para o repositório depois.
+
+
+Podemos acessar as modificações dos projetos, usando o comando "git log".
+
+
+Podemos também renomear arquivos com o comando "git mv", o mesmo também pode ser movido para outra pasta. precisa colocar o nome do arquivo, depois a pasta que irá mover e depois o nome do arquivo de novo (git mv arquivo pasta_nova/arquivo).
+
+Para desfazer as alterações que já fizemos, podemos restaurar o arquivo para seu estado original, usando o comando "git checkout <file>".
+
+Podemos ignorar alguns arquivos que não queremos no nosso projeto, devemos criar um arquivo .gitignore, e dentro deles podemos colocar todos os arquivos que queremos excluir nele.
+
+Podemos desfazer tudo o que já fizemos em um branch, usando o comando "git reset --hard".
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                             Gerenciando branches:
+
+O branch é uma ramificação ou separação do nosso projeto, ele pode separar as varias partes de um projeto. Após a finalização das alterações dos branchs, eles são unidos.
+
+
+Para criar um branch devemos usar o comando "git branch <nome do branch>" e para ver o branch que está e existem é necessário a´penas colocar "git branch".
+
+Podemos deletar um branch com o comando acima com o parâmetro -d ou --delete.
+
+Podemos também mudar de branch, utilizando o comando "git checkaout -b <nome do branch>"
+
+
+Podemos unir duas branchs usando o comando "git marge <branch>" na branch que desejamos unir, por exemplo estar na branch main e querer as coisas que estão na branch teste um, eu entro na main, e uso o comando com o nome da branch teste um para puxar os arquivos de lá.
+
+Caso queira jogar numa lixeira um código mas não definitivamente, podemos usar o código git stash. assim o branch que eu efetuar esse código vai retornar ao seu estado original.
+
+Para recuperar os códigos no stash, posso ver o nome das stachs com o comando git stach list. Agora para recuperar uma dessas stachs é necessário colocar apenas o comando git stash apply <nome>.
+
+
+Podemos remover todas as stachs com o comando git stach clear, mas se quisermos deletar uma stach especifica, o comando necessário é o git stach drop <nome da stach>.
+
+
+Podemos também criar tags (salvar marcos do desenvolvimento, se estou fazendo certo eu continuo naquilo), para isso usa-se o comando git tag -a <nome> -m "<msg>" isso para dizer o que está fazendo.
+
+Podemos também atualizar alterar as tags, igual trocamos as branchs com o comando git checkout e para ver mais detalhada a tag, com o comando show e o nome da tag.
+
+Podemos enviar tags ao projeto também, com o comando git push origin <tag> ou mais de uma com o comando git push origin --tags.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                             Compartilhamento e atualização de repositórios:
+
+Para encontrar branchs novos, posso usar o comando git fetch, assim posso ter acesso a outras branchs que agora estão no repositório.
+
+Para receber atualizações do repositório e projetos, é necessário o uso do comando git pull, cada branch pode ser atualizado com esse comando.
+
+Para enviar as informações para o repositório é necessário usar o comando push, ele envia informações atualizadas do projeto, mas também pode enviar atualizações de arquivos específicos. Antes de dar um push, sempre temos que salvar os arquivos com o add, e comittar também. 
+
+Com o git remote podemos transitar para novos repositórios, para ver as origens, podemos dar um git remote -v. Para adicionar um novo repositório é só colocar o comando git remote origin <url>
+
+Podemos ter mais de um projeto em um repositório, para adicionar um novo repositório, basta utilizar o comando git submodule add <repo>, e para ver os submódulos apenas o comando git submodule.
+
+Para atualizar os submódulos é necessário comitar as mudanças, e depos enviar para o repositório do submódulo com o comando git push --recurse-submodules=on-demand.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                             Análises e inspeção:
+
+
+O comando git show auxilia emostar informações úteis, da branch atual e seus commits, de arquivos modificados, e até mesmo de tags.
+
+Para ver diferenças entre dois arquivos ou branchas podemos usar o comando git diff, e para arquivos é necessário colocar os dois arquivos que desejamos comparar.
+
+Para ter um log resumido de um projeto, podemos usar o comando git shortlog, isso de uma forma rápida e mostra as informações principais deles.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                             Administração de repositórios:
+
+Para limpar os arquivos que eu não utilizei o git add, posso usar o git clean, ele é bom para otimizar o repositório. É sempre bom ver se não há um arquivo importante nesse meio.
+
+Podemos usar o comando git gc para otimizar o git, eliminando arquivos que o git não acha mais necessário.
+
+Um comando para verificar a integridade do repositório é o comando git fsck, ele observa a conectividade dos arquivos e também se existem arquivos corrompidos.
+
+Existe um comando que mapeia todos os nossos passos no projeto, esse comando é o git reflog, ele mapeia até mudanças de branch.
+
+Podemos também comprimir o repositório com o comando git archive --format zip --output main_files.zip main, transformando todo repositório em um arquivo.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                             Algumas importâncias dos commits: 
+
+Não é algo legal enviar vários commits, para ser mais profissional, é melhor organiza-los melhor, commits sem sentido atrapalham os projetos.
+
+
+Podemos usar private branches, ele funciona de uma forma interessante, podemos criar um branch que não compartilhamos com o repositório, e ao terminar tudo o que queremos nesse branch, temos que usar o comando, git rebase <branch que irá receber> <branch privado>. Ao clicar na tecla "i" Podemos usar o squash para eliminar commits inúteis e o reword para renomear tudo isso depois do comando acima, trocar os comandos pick por squash ou reword. Para sair do terminal e salvar as alterações é necessário clicar no esc e depois :x!.
+
+
+Para melhorar as commits, começar com um assunto, um corpo de no máximo 72 caracteres, e tentar explicar o que está acontecendo.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                             GitHub:
+
+É sempre bom deixar o perfil do GitHub atualizado, já foi anotado anteriormente como criar um repositório.
+
+Na aba code, nós conseguimos encontrar o código fonte do repositório. Podemos também checar o documento readme.mb, além da licença do projeto.
+
+A aba issue podemos criar tarefas e possíveis bugs do projeto para serem resolvido. Podemos usar o markdown para escrever. Já possuem labels pré-definidos.
+
+Na aba pull request os colaboradores do projeto enviam o código para resolver as issues ou adicionar novas funcionalidades para o projeto. Serve para não ir direto para a branch master, mas sim ser analisado  antes. 
+
+Na aba actions é onde podemos criar automatizações de deploy, com integração em outros serviços. Incluindo CI/CD (continuous integration/ development). Resumindo e explicando podemos criar uma rotina de atualizar a master e outros projetos automaticamente.
+
+
+Na aba projects podemos criar um projeto e utilizar um quadro de tarefas. Esse projeto é conhecido como Kanban, serve como uma forma de organização.
+
+ 
+Na aba wiki, podemos criar uma documentação mais extensa para o projeto.
+
+Na aba insights temos as informações detalhadas do projeto, quem contribui, forks e dados do projeto.
+
+Na aba settings podemos mexer nas configurações do projeto, alterar dados e colaboradores, etc.
+
+Podemos criar gists, isso são, pequenos blocos de códigos que podem ser hospedados no GitHub.
+
+
+Podemos encontrar repositórios olhando o código fonte de devs mais experientes.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                             Markdown:   } - símbolo usado apenas para ser usado no GitHub.
+
+O markdown não é uma linguagem de programação, é uma forma de escrever em arquivos com alguns símbolos diferentes.
+
+Ele adiciona estilos a textos web. O arquivo readdme.md pode ser escrito em markdown. Ele pode exibir trechos de códigos, links, imagens e varias coisas diferentes.
+
+Para criar títulos/cabeçalhos, devemos usar # ele funciona de maneira semelhante ao html, o maior titulo (h1) é apenas 1 #, e vai até o h6, sendo uados 6 #.
+
+Para deixar textos em negrito, podemos usar os símbolos de ** no começo e no final da palavra, já para escrever em itálico podemos usar apenas 1 no final e no inicio. pode-se combinar também os dois usando o _.
+
+Podemos fazer também listas ordenadas e não ordenadas, para uma não ordenada pode-se usar apenas 1 * no inicio e listar. Já uma ordenada precisamos colocar um número e depois dele um ponto. Para fazer uma sublista, devemos acrescentar 4 espaços dentro do item desejado ou 4 tabs pelo vscode.
+
+Para colocar imagens no markdown existe uma sintaxe (![texto alt](link da imagem)) essa imagem deve estar no repositório ou pode ser externa.
+
+Para inserir um link a sintaxe é: [texto do link](link) {para links no GitHub não é necessária a sintaxe.}.
+
+Podemos unir, também, um link e uma imagem, usando a sintaxe da imagem e depois adicionar mais um parêntese com o link. 
+
+{Podemos adicionar um código usando a sintaxe '''código'''. Lembrando de especificar qual é a linguagem de programação.}.
+
+{Podemos também fazer uma lista de tarefas, usando a sintaxe -[] texto para itens não concluídos e -[x] texto para concluídos.}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

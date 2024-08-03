@@ -10,7 +10,16 @@ comando toch: esse coamndo auxilia para criação de arquivos, ele não edita o 
 
 comando man: ele funciona como um manual de qualquer comando e coisas que podemos fazer com ele. Exemplo ls man
 
+tr: substitui o que eu pedir por outra coisa, ele também deleta letras com o -d
+
+cut: com o -c eu especifico quantos caracteres tem que existir.
+
+diff: ele analisa diferenças entre arquivos.
+
+date: Ele mostra a data do sistema.
+
 Dica: posso usar o comando ctrl + r para buscar algum comando que eu já tenha usado no terminal.
+| essa barra permite colocar vários comandos de uma vez.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -55,7 +64,7 @@ Comando tail: ele faz o inverso do head dando as ultimas linhas do texto. Podemo
 
 Comando grep: ele busca um comando dentro de um arquivo. é necessário apenas colocar o comando, a palavra ou termo entre aspas e o arquivo. Posso usaro argumento -i para ignorar erros, usar o -c para falar quantas vezes ela repete, o -r busca em todos os arquivos do diretório.
 
-Comando find: ele serve para achar diretórios e arquivos, é necessário colocar o seu nome, e depois o argumento -name, caso saiba e digite o nome corretamente, caso não saiba, deve-se colocar -iname, logo depoiscolocar o nome do arquivo que desejamos encontrar. posso também colocar só uma parte do nome do documento e então colocar um *, e todos os parecidos irão aparecer (find -iname docum*). Posso achar arquivos e diretórios vazios usando o argumento -empty e se for especificar o tipo de arquivo, -type "f" para arquivos e "d" para diretórios.
+Comando find: ele serve para achar diretórios e arquivos, é necessário colocar o seu nome, e depois o argumento -name, caso saiba e digite o nome corretamente, caso não saiba, deve-se colocar -iname, logo depois colocar o nome do arquivo que desejamos encontrar. posso também colocar só uma parte do nome do documento e então colocar um *, e todos os parecidos irão aparecer (find -iname docum*). Posso achar arquivos e diretórios vazios usando o argumento -empty e se for especificar o tipo de arquivo, -type "f" para arquivos e "d" para diretórios.
 
 Comando locate: ele é parecido com o find, pois ele já tem mapiado todos os arquivos antigos do banco de dados, podemos achar os arquivos que ele sabe e onde está o banco de dados usando o -s.
 
@@ -148,7 +157,9 @@ Para compactar para um arquivo .zip preciso colocar o comando zip -r + o nome do
 
 
 
+Conteúdos extras: 
 
+quando for mandar uma informação com o comando > para um arquivo, ele sobrescreve a informação que havia nele, para concatenar o arquivo são >>. Essas saídas são da entrada 1, se eu quiser escrever um erro, preciso colocar o numero 2 antes dos >>. Pode colocar eles em sequência, exemplo ls -l alunos.txt >> log.out 2> log_error.out, e se for para colocar os 2 no mesmo arquivo  apenas substituir o log_error por &1.
 
 
 
