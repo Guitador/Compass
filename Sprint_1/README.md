@@ -15,7 +15,7 @@ Ao realizar o desafio encontrei algumas dificuldades com relação ao uso do she
 ## Criação do script processamento
 Inicialmente o script iria ser de uma forma, mas ao testar não foi realizado com êxito, então pesquisando um pouco sobre novos comandos, e com uma pequena ajuda da inteligência artificial, consegui consolidar o código.
 
-![Código de Processamento](Evidencias/codigo_de_processamento.png)
+![Código de Processamento](Evidencias/Codigo_de_processamento.png)
 
 ## Agendamento
 Para agendar uma tarefa no linux, é necessario o uso do cron, usando ele, pude programar a atividade para ser realizada no período estipulado em sua data e hora.
