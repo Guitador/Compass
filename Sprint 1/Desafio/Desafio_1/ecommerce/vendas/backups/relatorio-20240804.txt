@@ -1,0 +1,18 @@
+Data de execução do script: 2024/08/04
+Data do primeiro registro de venda: 01/01/2023
+Data do último registro de venda: 31/01/2023
+Quantidade total de itens vendidos: 475
+
+Primeiras 10 linhas do arquivo:
+id,produto,quantidade,preço,data
+1,Sacola,2,2.90,01/03/2023
+2,oculos de sol,120,100.00,02/03/2023
+3,Saia,30,89.90,03/03/2023
+4,meia,20,5.00,04/03/2023
+5,Antena,1,56.00,05/03/2023
+6,camiseta,7,467.00,06/03/2023
+7,Calça social,7,450.00,07/03/2023
+8,Terno,7,780.00,08/03/2023
+9,gravata,7,100.00,09/03/2023
+///////////////////////////////////////////////////////////////////
+                                                                                       

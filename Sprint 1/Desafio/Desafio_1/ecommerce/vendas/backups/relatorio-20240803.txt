@@ -1,0 +1,18 @@
+Data de execução do script: 2024/08/03
+Data do primeiro registro de venda: 01/01/2023
+Data do último registro de venda: 31/01/2023
+Quantidade total de itens vendidos: 475
+
+Primeiras 10 linhas do arquivo:
+id,produto,quantidade,preço,data
+1,roupão,4,129.90,01/02/2023
+2,Meia,12,30.95,02/02/2023
+3,Coturno,1,100.00,03/02/2023
+4,Fone,20,15.20,04/02/2023
+5,Macacão,15,150.00,05/02/2023
+6,Taça,7,20.00,06/02/2023
+7,Giz,100,30.00,07/02/2023
+8,Chapéu fedora,4,220.00,08/02/2023
+9,Flores artificiais,12,29.80,09/02/2023
+///////////////////////////////////////////////////////////////////
+                                                                                       
