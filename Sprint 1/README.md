@@ -18,6 +18,7 @@ Inicialmente o script iria ser de uma forma, mas ao testar não foi realizado co
 <img src = "evidencias/Screenshots/codigo de processamento.png">
 <img src = "evidencias/Screenshots/codigo de processamento 2.png">
 <img src = "evidencias/Screenshots/codigo de processamento final.png">
+![Primeira parte](evidencias/Screenshots/codigo de processamento.png)
 
 ## Agendamento
 Para agendar uma tarefa no linux, é necessario o uso do cron, usando ele, pude programar a atividade para ser realizada no período estipulado em sua data e hora.
