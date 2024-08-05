@@ -18,7 +18,7 @@ Inicialmente o script iria ser de uma forma, mas ao testar não foi realizado co
 ![Código de Processamento](Evidencias/codigo_de_processamento.png)
 
 
-<img src = "evidencias/Screenshots/codigo de processamento.png">
+<img src = "Evidencias/codigo de processamento.png">
 <img src = "evidencias/Screenshots/codigo de processamento 2.png">
 <img src = "evidencias/Screenshots/codigo de processamento final.png">
 
