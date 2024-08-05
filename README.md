@@ -5,3 +5,7 @@ Olá, eu me chamo Guilherme Paes Harmon, Atualmente eu estou morando na cidade d
 # O que estou aprendendo
 
 Estou fazendo anotações de tudo que vejo nas aulas, estou salvando elas em arquivos de texto, onde adicionarei cada um à sua sprint. Externamente estou procurando formas de resolver os desafios, está sendo interessante e muito desafiador, pois é algo totalmente novo.
+
+# Arquivos README
+
+![sprint 1](Sprint_1/README.md)(Sprint 1)
