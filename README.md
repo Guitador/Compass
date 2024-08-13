@@ -9,3 +9,4 @@ Estou fazendo anotações de tudo que vejo nas aulas, estou salvando elas em arq
 # Arquivos README
 
 ![sprint 1](Sprint_1/README.md)(Sprint 1)
+![sprint 2](Sprint_2/README.md)(Sprint 2)
