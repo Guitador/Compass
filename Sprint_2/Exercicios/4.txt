@@ -1,0 +1,10 @@
+select
+nome,
+codAutor,
+nascimento,
+count (*) as quantidade
+from autor as au
+left join livro
+on au.codAutor = livro.autor
+group by nome
+order by nome
