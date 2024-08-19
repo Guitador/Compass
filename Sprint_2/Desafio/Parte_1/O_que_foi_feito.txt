@@ -1,0 +1,12 @@
+Normalizar:
+Com base na estrutura da tabela tb_locacao, identifiquei que algumas informações estão "desnormalizadas". Por exemplo, há repetição de informações sobre o cliente, carro, vendedor, etc.
+
+ Criar um Modelo Dimensional
+Depois da normalização, vou criar um modelo dimensional focado em fatos e dimensões.
+
+Modelo Dimensional
+Criar Tabelas de Dimensões
+Vou criar as tabelas de dimensões baseadas nas tabelas normalizadas.
+
+Criar Tabela de Fatos
+A tabela de fatos vai referenciar as dimensões usando chaves estrangeiras.

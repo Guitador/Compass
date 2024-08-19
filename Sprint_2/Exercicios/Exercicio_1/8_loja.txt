@@ -1,0 +1,12 @@
+SELECT 
+    V.cdvdd, 
+    V.nmvdd
+FROM 
+    TBVENDEDOR V
+JOIN 
+    TBVENDAS TV ON V.cdvdd = TV.cdvdd
+GROUP BY 
+    V.cdvdd, V.nmvdd
+ORDER BY 
+    SUM(TV.qtd) DESC
+LIMIT 1;

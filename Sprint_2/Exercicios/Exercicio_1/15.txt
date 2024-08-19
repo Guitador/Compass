@@ -1,0 +1,8 @@
+SELECT 
+    v.cdven
+FROM 
+    TBVENDAS v
+WHERE 
+    v.deletado = not '0'
+ORDER BY 
+    v.cdven ASC;

@@ -1,0 +1,12 @@
+SELECT 
+    TV.cdpro, 
+    TV.nmpro
+FROM 
+    TBVENDAS TV
+WHERE 
+     TV.dtven BETWEEN '2014-02-03' AND '2018-02-02'
+GROUP BY 
+    TV.cdpro, TV.nmpro
+ORDER BY 
+    SUM(TV.qtd) DESC
+LIMIT 1;

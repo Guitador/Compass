@@ -1,0 +1,9 @@
+SELECT DISTINCT a.nome
+FROM AUTOR a
+JOIN LIVRO l ON a.codAutor = l.autor
+JOIN EDITORA e ON l.editora = e.codEditora
+JOIN ENDERECO en ON e.endereco = en.codEndereco
+WHERE en.estado NOT LIKE 'RIO GRANDE DO SUL' 
+AND en.estado NOT LIKE 'SANTA CATARINA' 
+AND en.estado NOT LIKE 'PARANÁ'
+ORDER BY a.nome ASC;
