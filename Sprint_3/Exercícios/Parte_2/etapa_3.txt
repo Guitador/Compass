@@ -1,0 +1,23 @@
+# Caminho do arquivo CSV
+csv_file_path = r'C:\Users\guiha\OneDrive\Documentos\pessoal\serios\Trabalho\Compass\GitHub\Sprint_3\Exercícios\Parte_2\actors.csv'
+
+# Variáveis para armazenar a maior média de receita e o ator/atriz correspondente
+media_do_filme_caro = 0
+ator_mais_rico = ""
+
+# Ler o arquivo CSV manualmente
+with open(csv_file_path, mode='r', encoding='utf-8') as file:
+    lines = file.readlines()
+    header = lines[0].strip().split(',')  # Dividir o cabeçalho por vírgulas
+    for line in lines[1:]:
+        # Dividir cada linha por vírgulas
+        data = line.strip().split(',')
+        # Extrair o valor da média de receita por filme
+        media_filme = float(data[header.index('Average per Movie')].replace(' ', '').replace('$', ''))
+        # Verificar se a média atual é maior que o máximo encontrado até agora
+        if media_filme > media_do_filme_caro:
+            media_do_filme_caro = media_filme
+            ator_mais_rico = data[header.index('Actor')]
+
+# Resultado
+print(f"O ator/atriz com a maior média de receita de bilheteria bruta por filme é {ator_mais_rico} com uma média de ${media_do_filme_caro:.2f} milhões por filme.")

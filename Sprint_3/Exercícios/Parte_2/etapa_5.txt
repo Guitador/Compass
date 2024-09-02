@@ -1,0 +1,29 @@
+# Caminho do arquivo CSV
+csv_file_path = r'C:\Users\guiha\OneDrive\Documentos\pessoal\serios\Trabalho\Compass\GitHub\Sprint_3\Exercícios\Parte_2\actors.csv'
+output_file_path = r'C:\Users\guiha\OneDrive\Documentos\pessoal\serios\Trabalho\Compass\GitHub\Sprint_3\Exercícios\Parte_2\etapa-receita.txt'
+
+# Lista para armazenar os atores e suas receitas
+lista_atores = []
+
+# Ler o arquivo CSV manualmente
+with open(csv_file_path, mode='r', encoding='utf-8') as file:
+    lines = file.readlines()
+    header = lines[0].strip().split(',')  # Dividir o cabeçalho por vírgulas
+    for line in lines[9:]:
+        # Dividir cada linha por vírgulas
+        data = line.strip().split(',')
+        # Extrair o nome do ator e a receita total bruta
+        ator = data[header.index('Actor')]
+        total_bruto = float(data[header.index('Total Gross')].replace(' ', '').replace('$', ''))
+        # Adicionar o ator e a receita à lista
+        lista_atores.append((ator, total_bruto))
+
+# Ordenar a lista pela receita bruta em ordem decrescente
+lista_atores.sort(key=lambda x: -x[1])
+
+# Escrever os resultados no arquivo de saída
+with open(output_file_path, mode='w', encoding='utf-8') as output_file:
+    for ator, bruto in lista_atores:
+        output_file.write(f"{ator} - ${bruto:.2f} milhões\n")
+
+print(f"Os resultados foram escritos no arquivo: {output_file_path}")

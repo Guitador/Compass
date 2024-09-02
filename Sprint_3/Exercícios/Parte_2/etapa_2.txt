@@ -1,0 +1,24 @@
+# Caminho do arquivo CSV
+csv_file_path = r'C:\Users\guiha\OneDrive\Documentos\pessoal\serios\Trabalho\Compass\GitHub\Sprint_3\Exercícios\Parte_2\actors.csv'
+
+# Variáveis para armazenar a soma das receitas e o número de filmes
+total_gross = 0
+contagem_filmes = 0
+
+# Ler o arquivo CSV manualmente
+with open(csv_file_path, mode='r', encoding='utf-8') as file:
+    lines = file.readlines()
+    header = lines[0].strip().split(',')  # Dividir o cabeçalho por vírgulas
+    for line in lines[9:]:
+        # Dividir cada linha por vírgulas
+        data = line.strip().split(',')
+        # Extrair o valor da receita bruta (Gross)
+        gross = float(data[header.index('Gross')].replace(' ', '').replace('$', ''))
+        total_gross += gross
+        contagem_filmes += 1
+
+# Calcular a média
+media_gross = total_gross /  contagem_filmes if  contagem_filmes > 0 else 0
+
+# Resultado
+print(f"A média da receita bruta dos principais filmes de todos os atores é ${media_gross:.2f} milhões.")

@@ -1,0 +1,31 @@
+# Caminho do arquivo CSV
+csv_file_path = r'C:\Users\guiha\OneDrive\Documentos\pessoal\serios\Trabalho\Compass\GitHub\Sprint_3\Exercícios\Parte_2\actors.csv'
+output_file_path = r'C:\Users\guiha\OneDrive\Documentos\pessoal\serios\Trabalho\Compass\GitHub\Sprint_3\Exercícios\Parte_2\etapa-filmes.txt'
+
+# Dicionário para armazenar a contagem dos filmes
+contagem_filme = {}
+
+# Ler o arquivo CSV manualmente
+with open(csv_file_path, mode='r', encoding='utf-8') as file:
+    lines = file.readlines()
+    header = lines[0].strip().split(',')  # Dividir o cabeçalho por vírgulas
+    for line in lines[1:]:
+        # Dividir cada linha por vírgulas
+        data = line.strip().split(',')
+        # Extrair o nome do filme
+        filme = data[header.index('#1 Movie')]
+        # Incrementar a contagem do filme no dicionário
+        if filme in contagem_filme:
+            contagem_filme[filme] += 1
+        else:
+            contagem_filme[filme] = 1
+
+# Ordenar os filmes por contagem decrescente e nome em ordem alfabética
+sorted_movies = sorted(contagem_filme.items(), key=lambda x: (-x[1], x[0]))
+
+# Escrever os resultados no arquivo de saída
+with open(output_file_path, mode='w', encoding='utf-8') as output_file:
+    for filme, contagem in sorted_movies:
+        output_file.write(f"O filme {filme} aparece {contagem} vez(es) no dataset.\n")
+
+print(f"Os resultados foram escritos no arquivo: {output_file_path}\n")
