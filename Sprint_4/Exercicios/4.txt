@@ -1,0 +1,6 @@
+def calcular_valor_maximo(operadores, operandos) -> float:
+    # Aplicar as operações matemáticas aos pares de operandos e operadores
+    resultados = map(lambda op_ope: eval(f"{op_ope[1][0]} {op_ope[0]} {op_ope[1][1]}"), zip(operadores, operandos))
+    
+    # Retornar o maior valor entre os resultados
+    return max(resultados)

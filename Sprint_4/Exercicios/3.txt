@@ -1,0 +1,10 @@
+from functools import reduce
+
+def calcula_saldo(lancamentos) -> float:
+    # Usar map para transformar os lançamentos
+    valores_ajustados = map(lambda x: x[0] if x[1] == 'C' else -x[0], lancamentos)
+    
+    # Usar reduce para somar os valores ajustados
+    saldo_final = reduce(lambda acumulado, valor: acumulado + valor, valores_ajustados)
+    
+    return saldo_final

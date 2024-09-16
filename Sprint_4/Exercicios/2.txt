@@ -1,0 +1,6 @@
+def conta_vogais(texto: str) -> int:
+    # Definimos as vogais
+    vogais = "aeiou"
+    
+    # Filtrar as vogais no texto, ignorando maiúsculas e minúsculas
+    return len(list(filter(lambda x: x.lower() in vogais, texto)))

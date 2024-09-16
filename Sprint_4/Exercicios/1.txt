@@ -1,0 +1,16 @@
+# Leitura do arquivo de números
+with open("number.txt", "r") as file:
+    numeros = list(map(int, file.readlines()))
+
+# Filtrar apenas os números pares
+pares = list(filter(lambda x: x % 2 == 0, numeros))
+
+# Ordenar os pares em ordem decrescente e pegar os 5 maiores
+maiores_pares = sorted(pares, reverse=True)[:5]
+
+# Somar os 5 maiores pares
+soma_maiores_pares = sum(maiores_pares)
+
+# Exibir a lista dos 5 maiores pares e a soma
+print(maiores_pares)
+print(soma_maiores_pares)

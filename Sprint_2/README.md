@@ -1,5 +1,7 @@
 # Aqui começa uma nova Sprint
+
 ## explica Rapida do que foi feito na sprint
+
 Nessa sprint tive alguns desafios por não ter conseguido gostar de SQL e o curso AWS não ter sido tão interessante quanto eu achava.
 Contudo pude completar tudo de maneira entendivel e deu tudo certo.
 
@@ -12,8 +14,9 @@ Antes do desafio gostaria de deixar aqui algumas evidências dos exercicios, faz
 ![sprint 2](Evidencias/evidencia_código_sql_3.1.png)
 ![sprint 2](Evidencias/evidencia_1_código_sql_3,2.png)
 
-### início do desafio.
-O desafio não foi tão desafiador quanto o anterior, mas um gosto pessoal foi que o desafio linux foi mais legal. Para começar, nos 
+### início do desafio
+
+O desafio não foi tão desafiador quanto o anterior, mas um gosto pessoal foi que o desafio linux foi mais legal. Para começar, nos
 era dado uma tabela e o desafio pedia que nós "normalizassemos" essa tabela, para um modelo relacional, e posteriormente para um dimensional.
 Como primeiro exemplo os códigos que foram usados normalizar estão na pasta desafio.
 

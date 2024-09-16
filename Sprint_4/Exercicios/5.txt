@@ -1,0 +1,33 @@
+import csv
+
+def processar_notas(arquivo_csv):
+    with open(arquivo_csv, mode='r') as file:
+        leitor_csv = csv.reader(file)
+        relatorio = []
+
+        for linha in leitor_csv:
+            nome = linha[0]
+            notas = list(map(int, linha[1:]))
+            
+            # Obtendo as três maiores notas
+            tres_maiores_notas = sorted(notas, reverse=True)[:3]
+            
+            # Calculando a média das três maiores notas
+            media = round(sum(tres_maiores_notas) / 3, 2)
+            
+            # Preparando o relatório para o estudante
+            relatorio.append((nome, tres_maiores_notas, media))
+        
+        # Ordenando o relatório pelo nome completo dos estudantes
+        relatorio_ordenado = sorted(relatorio, key=lambda x: x[0])
+        
+        # Imprimindo o relatório
+        for entrada in relatorio_ordenado:
+            nome, notas, media = entrada
+            print(f"Nome: {nome} Notas: {notas} Média: {media}")
+
+# Nome do arquivo CSV
+arquivo_csv = 'estudantes.csv'
+
+# Processar as notas e gerar o relatório
+processar_notas(arquivo_csv)

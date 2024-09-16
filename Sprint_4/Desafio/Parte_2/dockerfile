@@ -1,0 +1,12 @@
+# Usar uma imagem base do Python
+FROM python:3.9-slim
+
+# Definir o diretório de trabalho
+WORKDIR /app
+
+# Copiar o script Python para o diretório de trabalho
+COPY mascarar_dados.py .
+
+
+# Executar o script Python quando o container for iniciado
+CMD ["python", "mascarar_dados.py"]
